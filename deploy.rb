@@ -57,7 +57,7 @@ def wait_for_passed(job_id, started_at = Time.now)
     when 'passed'
       puts 'Yay'
     when 'pending', 'executing'
-      sleep(5)
+      sleep(60)
       wait_for_passed job_id, started_at
     when 'failed', 'aborted', 'aborting'
       fail 'FAILED'
