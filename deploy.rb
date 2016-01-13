@@ -69,8 +69,10 @@ end
 
 tree_id = get_tree_id('https://github.com/Madek/madek.git', 'master')
 
-['deploy_test_with-restore-data',
- 'deploy_staging-v3-pdata_with-restore-data'].each do |job_key|
+[ 'deploy_test8_with-db-drop',
+  'deploy_staging-v3-upload_with-db-drop',
+  'deploy_test_with-restore-data',
+  'deploy_staging-v3-pdata_with-restore-data'].each do |job_key|
   job_id = create_job_or_retry tree_id, job_key
   wait_for_passed job_id
 end
