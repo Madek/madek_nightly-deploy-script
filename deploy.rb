@@ -67,7 +67,7 @@ def wait_for_passed(job_id, started_at = Time.now)
   end
 end
 
-tree_id = get_tree_id('https://github.com/Madek/madek.git', 'master')
+tree_id = get_tree_id('https://github.com/Madek/madek', 'master')
 
 [ 'deploy_test8_with-db-drop',
   'deploy_staging-v3-upload_with-db-drop',
